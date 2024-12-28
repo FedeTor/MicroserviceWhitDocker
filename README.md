@@ -63,7 +63,6 @@ Dentro de la carpeta "Documentation" se encuentra el script para crear la base d
 - PUT **```/api/products/update```**: Actualiza un producto existente
 - DELETE **```/api/products/delete```**: Elimina un producto
 
-
 🧪 **_Pruebas Unitarias_**
 
 El proyecto incluye pruebas unitarias implementadas en la capa **Application.Tests** utilizando **Moq** y **NUnit**. Estas pruebas aseguran la calidad y la estabilidad del código, permitiendo identificar y corregir errores de manera temprana.
@@ -84,6 +83,8 @@ También puedes ejecutar las pruebas, dentro de la carpeta donde se encuentran l
 
 ```bash
 dotnet test
+
+--
 
 ## 🐳 **_Docker y Contenerización_**
 

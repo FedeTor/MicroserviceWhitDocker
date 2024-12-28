@@ -84,7 +84,7 @@ También puedes ejecutar las pruebas, dentro de la carpeta donde se encuentran l
 ```bash
 dotnet test
 
----
+-----------------------------------------------------------------------------------------------------------------------------------------
 
 ## 🐳 **_Docker y Contenerización_**
 

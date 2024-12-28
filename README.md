@@ -134,8 +134,7 @@ El archivo `docker-compose.yml` configura los servicios de contenedores necesari
   https://github.com/FedeTor/MicroserviceWhitDocker.git
   ```
 #### **Comandos Docker y enfoque Code First para migrar la base de datos**
-1. **Construir los contenedores**: Desde la carpeta raiz del proyecto ejecutar el siguiente comando:
-   Este comando construye y levanta los contenedores en segundo plano.
+1. **Construir los contenedores**: Desde la carpeta raiz del proyecto ejecutar el siguiente comando que construye y levanta los contenedores en segundo plano.
    ```bash
    docker-compose up --build -d
 
@@ -143,8 +142,7 @@ El archivo `docker-compose.yml` configura los servicios de contenedores necesari
    ```bash
    docker ps
    
-3. **Acceder a la API a través de Swagger**: Una vez que los contenedores están en funcionamiento, puedes acceder a la API usando Swagger en la siguiente URL:
-   Esta es la URL donde puedes interactuar con los endpoints de la API de manera interactiva.
+3. **Acceder a la API a través de Swagger**: Una vez que los contenedores están en funcionamiento, puedes acceder a la API usando Swagger en la siguiente URL, donde puedes interactuar con los endpoints de la API de manera interactiva.
    ```bash
    http://localhost:port/swagger
    

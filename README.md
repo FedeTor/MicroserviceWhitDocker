@@ -54,7 +54,7 @@ La base de datos predeterminada es SQL Server.
 
 Dentro de la carpeta "Documentation" se encuentra el script para crear la base de datos con la tabla correspondiente, opcionalmente se puede hacer mediante un enfoque Code First.
 
-### 🐳 **_Docker y Contenerización_**
+## 🐳 **_Docker y Contenerización_**
 
 Este proyecto incluye la configuración necesaria para ejecutar la API y la base de datos en contenedores mediante **Docker**.  
 El uso de Docker asegura un entorno de desarrollo consistente, simplifica la implementación y mejora la portabilidad.

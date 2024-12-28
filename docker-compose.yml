@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  sqlserverdocker:
+    container_name: sql-server-docker
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+      - 8006:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=MyPassword*1234
+    networks:
+      - mynetworkapi
+
+  api.presentation:
+    build:
+      context: .
+      dockerfile: Api.Presentation/Dockerfile
+    ports:
+      - 5001:8080
+    depends_on:
+      - sqlserverdocker
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      - mynetworkapi
+
+networks:
+  mynetworkapi:
+    driver: bridge 

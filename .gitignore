@@ -1,0 +1,48 @@
+# Archivos de configuración de Visual Studio
+.vs/
+.vscode/
+.idea/
+
+# Archivos de usuario y de configuración de proyectos
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Archivos de salida de compilación
+bin/
+obj/
+out/
+
+# Archivos de paquetes NuGet
+*.nupkg
+# Las carpetas de paquetes no deben ser versionadas
+packages/
+
+# Archivos de configuración del sistema
+Thumbs.db
+Desktop.ini
+
+# Archivos específicos de sistema operativo
+.DS_Store
+ehthumbs.db
+
+# Archivos generados por la compilación de Visual Studio
+# (ej. archivos .csproj generados, etc.)
+*.csproj.user
+
+# Ignorar archivos de Visual Studio Code
+.vscode/
+
+# Archivos temporales
+*.tmp
+*.bak
+
+# Otros archivos de configuración del IDE
+.idea/
+
+# Archivos de log
+*.log
+
+# Ignorar archivos de proyecto específicos como .csproj en ciertas rutas
+*.csproj

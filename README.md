@@ -88,6 +88,39 @@ El archivo `docker-compose.yml` configura los servicios de contenedores necesari
 
 - **Redes**: Los servicios se comunican a través de una red llamada `mynetworkapi`.
 
+## 📜 **_Endpoints Principales_**
+**Los endpoints principales disponibles en la API son**:
+
+- GET **```/api/products/all```**: Obtiene todos los productos
+- GET **```/api/products/get```**: Obtiene un producto por ID
+- POST **```/api/products/create```**: Agrega un nuevo producto
+- PUT **```/api/products/update```**: Actualiza un producto existente
+- DELETE **```/api/products/delete```**: Elimina un producto
+
+
+## 🧪 **_Pruebas Unitarias_**
+
+El proyecto incluye pruebas unitarias implementadas en la capa **Application.Tests** utilizando **Moq** y **NUnit**. Estas pruebas aseguran la calidad y la estabilidad del código, permitiendo identificar y corregir errores de manera temprana.
+
+#### Tecnologías Utilizadas
+- **Moq**: Una biblioteca para crear objetos simulados (mocks) en pruebas unitarias, lo que permite simular el comportamiento de las dependencias de las clases que se están probando.
+- **NUnit**: Un marco de trabajo para pruebas unitarias que permite escribir y ejecutar pruebas en .NET.
+
+#### Ejecución de Pruebas
+Para ejecutar las pruebas unitarias, sigue estos pasos:
+
+1. Abre la solución en Visual Studio o en tu IDE de preferencia.
+2. Asegúrate de que todos los proyectos estén construidos correctamente.
+3. Accede a la ventana **Test** en Visual Studio.
+4. Haz clic en **Run All** para ejecutar todas las pruebas.
+
+También puedes ejecutar las pruebas, dentro de la carpeta donde se encuentran las pruebas, desde la línea de comandos utilizando el siguiente comando:
+
+```bash
+dotnet test
+
+---
+
 ## ⚙️ **_Instrucciones de Ejecución_**
 
 **Requisitos Previos**
@@ -101,19 +134,19 @@ El archivo `docker-compose.yml` configura los servicios de contenedores necesari
   ```
 #### **Comandos Docker y enfoque Code First para migrar la base de datos**
 1. **Construir los contenedores**: Desde la carpeta raiz del proyecto ejecutar el siguiente comando:
+   Este comando construye y levanta los contenedores en segundo plano.
    ```bash
    docker-compose up --build -d
 
-   Este comando construye y levanta los contenedores en segundo plano.
-2. **Verificar los contenedores en ejecución**:
+2. **Verificar los contenedores en ejecución**: Esto muestra los contenedores en ejecución y los puertos expuestos.
    ```bash
    docker ps
-   Esto muestra los contenedores en ejecución y los puertos expuestos.
+   
 3. **Acceder a la API a través de Swagger**: Una vez que los contenedores están en funcionamiento, puedes acceder a la API usando Swagger en la siguiente URL:
-   ```bash
-   http://localhost:5001/swagger
    Esta es la URL donde puedes interactuar con los endpoints de la API de manera interactiva.
-
+   ```bash
+   http://localhost:port/swagger
+   
 4. **Enfoque Code First**: A continuación se describen los pasos para configurar y migrar la base de datos:
 
 **Requisitos Previos**
@@ -148,36 +181,5 @@ Update-Database -Project Infrastructure -StartupProject Api.Presentation
 
 **Probar la API**
 
-La API se encuentra documentada con Swagger.
+La API  documentada con Swagger estará disponible en ```https://localhost:port/swagger```
 Además se agregó una carpeta "Documentation" con la coleccion de postman, solo queda descargarla e importarla si se desea utilizar.
-
-## 📜 **_Endpoints Principales_**
-**Los endpoints principales disponibles en la API son**:
-
-- GET **```/api/products/all```**: Obtiene todos los productos
-- GET **```/api/products/get```**: Obtiene un producto por ID
-- POST **```/api/products/create```**: Agrega un nuevo producto
-- PUT **```/api/products/update```**: Actualiza un producto existente
-- DELETE **```/api/products/delete```**: Elimina un producto
-
-
-## 🧪 **_Pruebas Unitarias_**
-
-El proyecto incluye pruebas unitarias implementadas en la capa **Application.Tests** utilizando **Moq** y **NUnit**. Estas pruebas aseguran la calidad y la estabilidad del código, permitiendo identificar y corregir errores de manera temprana.
-
-#### Tecnologías Utilizadas
-- **Moq**: Una biblioteca para crear objetos simulados (mocks) en pruebas unitarias, lo que permite simular el comportamiento de las dependencias de las clases que se están probando.
-- **NUnit**: Un marco de trabajo para pruebas unitarias que permite escribir y ejecutar pruebas en .NET.
-
-#### Ejecución de Pruebas
-Para ejecutar las pruebas unitarias, sigue estos pasos:
-
-1. Abre la solución en Visual Studio o en tu IDE de preferencia.
-2. Asegúrate de que todos los proyectos estén construidos correctamente.
-3. Accede a la ventana **Test** en Visual Studio.
-4. Haz clic en **Run All** para ejecutar todas las pruebas.
-
-También puedes ejecutar las pruebas, dentro de la carpeta donde se encuentran las pruebas, desde la línea de comandos utilizando el siguiente comando:
-
-```bash
-dotnet test

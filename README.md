@@ -54,6 +54,37 @@ La base de datos predeterminada es SQL Server.
 
 Dentro de la carpeta "Documentation" se encuentra el script para crear la base de datos con la tabla correspondiente, opcionalmente se puede hacer mediante un enfoque Code First.
 
+📜 **_Endpoints Principales_**
+**Los endpoints principales disponibles en la API son**:
+
+- GET **```/api/products/all```**: Obtiene todos los productos
+- GET **```/api/products/get```**: Obtiene un producto por ID
+- POST **```/api/products/create```**: Agrega un nuevo producto
+- PUT **```/api/products/update```**: Actualiza un producto existente
+- DELETE **```/api/products/delete```**: Elimina un producto
+
+
+🧪 **_Pruebas Unitarias_**
+
+El proyecto incluye pruebas unitarias implementadas en la capa **Application.Tests** utilizando **Moq** y **NUnit**. Estas pruebas aseguran la calidad y la estabilidad del código, permitiendo identificar y corregir errores de manera temprana.
+
+#### Tecnologías Utilizadas
+- **Moq**: Una biblioteca para crear objetos simulados (mocks) en pruebas unitarias, lo que permite simular el comportamiento de las dependencias de las clases que se están probando.
+- **NUnit**: Un marco de trabajo para pruebas unitarias que permite escribir y ejecutar pruebas en .NET.
+
+#### Ejecución de Pruebas
+Para ejecutar las pruebas unitarias, sigue estos pasos:
+
+1. Abre la solución en Visual Studio o en tu IDE de preferencia.
+2. Asegúrate de que todos los proyectos estén construidos correctamente.
+3. Accede a la ventana **Test** en Visual Studio.
+4. Haz clic en **Run All** para ejecutar todas las pruebas.
+
+También puedes ejecutar las pruebas, dentro de la carpeta donde se encuentran las pruebas, desde la línea de comandos utilizando el siguiente comando:
+
+```bash
+dotnet test
+
 ## 🐳 **_Docker y Contenerización_**
 
 Este proyecto incluye la configuración necesaria para ejecutar la API y la base de datos en contenedores mediante **Docker**.  
@@ -87,37 +118,6 @@ El archivo `docker-compose.yml` configura los servicios de contenedores necesari
   - Dependencias: La API depende del servicio de base de datos, garantizando que SQL Server esté disponible antes de iniciar la API.
 
 - **Redes**: Los servicios se comunican a través de una red llamada `mynetworkapi`.
-
-## 📜 **_Endpoints Principales_**
-**Los endpoints principales disponibles en la API son**:
-
-- GET **```/api/products/all```**: Obtiene todos los productos
-- GET **```/api/products/get```**: Obtiene un producto por ID
-- POST **```/api/products/create```**: Agrega un nuevo producto
-- PUT **```/api/products/update```**: Actualiza un producto existente
-- DELETE **```/api/products/delete```**: Elimina un producto
-
-
-## 🧪 **_Pruebas Unitarias_**
-
-El proyecto incluye pruebas unitarias implementadas en la capa **Application.Tests** utilizando **Moq** y **NUnit**. Estas pruebas aseguran la calidad y la estabilidad del código, permitiendo identificar y corregir errores de manera temprana.
-
-#### Tecnologías Utilizadas
-- **Moq**: Una biblioteca para crear objetos simulados (mocks) en pruebas unitarias, lo que permite simular el comportamiento de las dependencias de las clases que se están probando.
-- **NUnit**: Un marco de trabajo para pruebas unitarias que permite escribir y ejecutar pruebas en .NET.
-
-#### Ejecución de Pruebas
-Para ejecutar las pruebas unitarias, sigue estos pasos:
-
-1. Abre la solución en Visual Studio o en tu IDE de preferencia.
-2. Asegúrate de que todos los proyectos estén construidos correctamente.
-3. Accede a la ventana **Test** en Visual Studio.
-4. Haz clic en **Run All** para ejecutar todas las pruebas.
-
-También puedes ejecutar las pruebas, dentro de la carpeta donde se encuentran las pruebas, desde la línea de comandos utilizando el siguiente comando:
-
-```bash
-dotnet test
 
 ---
 

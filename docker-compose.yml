@@ -9,7 +9,7 @@ services:
       - ACCEPT_EULA=Y
       - MSSQL_SA_PASSWORD=MyPassword*1234
     networks:
-      - mynetworkapi
+      - customnetworkapi
 
   api.presentation:
     build:
@@ -22,9 +22,15 @@ services:
     environment:
       - ASPNETCORE_URLS=http://+:8080
       - ASPNETCORE_ENVIRONMENT=Development
+      - DB_CONNECTION_STRING=${DB_CONNECTION_STRING}
     networks:
-      - mynetworkapi
+      - customnetworkapi
 
 networks:
-  mynetworkapi:
+  customnetworkapi:
+    name: customnetworkapi
     driver: bridge 
+
+
+
+

@@ -2,8 +2,6 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
-ENV DB_CONNECTION_STRING="Server=192.168.100.3,1433;Database=TEST;User ID=sa;Password=Admin123;TrustServerCertificate=True;"
-#ENV DB_CONNECTION_STRING="Server=sqlserverdocker;Database=TEST2;User ID=sa;Password=MyPassword*1234;TrustServerCertificate=True;"
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src

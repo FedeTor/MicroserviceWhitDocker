@@ -43,6 +43,3 @@ ehthumbs.db
 
 # Archivos de log
 *.log
-
-# Ignorar archivos de proyecto específicos como .csproj en ciertas rutas
-*.csproj

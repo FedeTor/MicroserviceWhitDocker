@@ -21,17 +21,12 @@ namespace Application.UseCase
         {
             _logger.LogInformation("Start GetAllAsync");
 
-            try
-            {
-                var products = await _productRepository.GetAll();
-                return products.Any()
-                    ? Result<IEnumerable<Product>>.CreateSuccess(products, "Productos encontrados.")
-                    : Result<IEnumerable<Product>>.CreateSuccess(products, "No se encontraron productos cargados.");
-            }
-            catch (Exception ex)
-            {
-                return Result<IEnumerable<Product>>.CreateError($"Error al obtener los productos: {ex.Message}");
-            }
+            var products = await _productRepository.GetAll();
+
+            return products.Any()
+                ? Result<IEnumerable<Product>>.CreateSuccess(products, "Productos encontrados.")
+                : Result<IEnumerable<Product>>.CreateSuccess(products, "No se encontraron productos cargados.");
         }
+
     }
 }

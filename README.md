@@ -118,7 +118,7 @@ El archivo `docker-compose.yml` configura los servicios de contenedores necesari
     - `ASPNETCORE_ENVIRONMENT=Development`: Define el entorno como desarrollo.
   - Dependencias: La API depende del servicio de base de datos, garantizando que SQL Server esté disponible antes de iniciar la API.
 
-- **Redes**: Los servicios se comunican a través de una red llamada `mynetworkapi`.
+- **Redes**: Los servicios se comunican a través de una red llamada `customnetworkapi`.
 
 ---
 

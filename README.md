@@ -116,6 +116,13 @@ El archivo `docker-compose.yml` configura los servicios de contenedores necesari
   - Variables de entorno:
     - `ASPNETCORE_URLS=http://+:8080`: Configura la URL base para la API.
     - `ASPNETCORE_ENVIRONMENT=Development`: Define el entorno como desarrollo.
+    - DB_CONNECTION_STRING=${DB_CONNECTION_STRING}: Carga la cadena de conexión a la base de datos desde un archivo .env.
+
+    Archivo .env:
+     ```
+    DB_CONNECTION_STRING=Server=sqlserverdocker,1433;Database=TEST;User ID=sa;Password=MyPassword*1234;TrustServerCertificate=True;
+     ```
+
   - Dependencias: La API depende del servicio de base de datos, garantizando que SQL Server esté disponible antes de iniciar la API.
 
 - **Redes**: Los servicios se comunican a través de una red llamada `customnetworkapi`.
